@@ -1,0 +1,1 @@
+# Godel.Microservice.CurrencyRates
