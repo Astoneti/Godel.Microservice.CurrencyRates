@@ -26,8 +26,8 @@ namespace Godel.Microservice.CurrencyRates.Controllers
         [HttpGet]
         public IEnumerable<CurrencyModel> Get()
         {
-            var list = _currencyService.GetList();
-            return _mapper.Map<List<CurrencyDto>, List<CurrencyModel>>(list);
+            var newList = _currencyService.GetList();
+            return _mapper.Map<List<CurrencyDto>, List<CurrencyModel>>(newList);
         }
     }
 }
