@@ -24,14 +24,15 @@ namespace Godel.Microservice.CurrencyRates.Controllers
         [HttpGet]
         public IEnumerable<CurrencyModel> Get()
         {
-            var newList = _currencyService.GetList();
-            return _mapper.Map<List<CurrencyDto>, List<CurrencyModel>>(newList);
+            var modelList = _currencyService.GetList();
+            return _mapper.Map<List<CurrencyDto>, List<CurrencyModel>>(modelList);
         }
 
         [HttpPost]
-        public void Create(CurrencyEntity currency)
+        public void Create(CurrencyModel currency)
         {
-           _currencyService.Create(currency);
+            var currencyDto = _mapper.Map<CurrencyModel, CurrencyDto> (currency);
+            _currencyService.Create(currencyDto);
         }
     }
 }

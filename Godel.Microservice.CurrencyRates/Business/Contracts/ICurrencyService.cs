@@ -8,6 +8,6 @@ namespace Godel.Microservice.CurrencyRates.Business.Contracts
     {
         public List<CurrencyDto> GetList();
 
-        public void Create(CurrencyEntity currency);
+        public void Create(CurrencyDto currency);
     }
 }
