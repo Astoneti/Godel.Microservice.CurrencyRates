@@ -3,14 +3,16 @@ using Godel.Microservice.CurrencyRates.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Godel.Microservice.CurrencyRates.Migrations
 {
     [DbContext(typeof(CurrencyDbContext))]
-    partial class CurrencyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211105094424_MigrationRename")]
+    partial class MigrationRename
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

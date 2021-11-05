@@ -5,7 +5,7 @@ using Godel.Microservice.CurrencyRates.Data.Contracts;
 using Godel.Microservice.CurrencyRates.Data.Entities;
 using System.Collections.Generic;
 
-namespace Godel.Microservice.CurrencyRates.Business.Services
+namespace Godel.Microservice.CurrencyRates.Business
 {
     public class CurrencyService : ICurrencyService
     {

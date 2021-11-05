@@ -5,7 +5,8 @@ namespace Godel.Microservice.CurrencyRates.Data.Repositories
 {
     public class CurrencyRepository : BaseRepository<CurrencyEntity>, ICurrencyRepository
     {
-        public CurrencyRepository(CurrencyDbContext dbContext) : base(dbContext)
+        public CurrencyRepository(CurrencyDbContext dbContext) 
+            : base(dbContext)
         {
         }
     }

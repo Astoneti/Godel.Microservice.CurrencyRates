@@ -5,11 +5,11 @@ using Godel.Microservice.CurrencyRates.Model;
 
 namespace Godel.Microservice.CurrencyRates.MappingHelper
 {
-    public class MappingProfile : Profile
+    public class CurrencyProfile : Profile
     {
-        public MappingProfile()
+        public CurrencyProfile()
         {
-            CreateMap<CurrencyModel, CurrencyDto>().ReverseMap();//почему мы здесь не используем  Лист типизацию??? а работает!!!
+            CreateMap<CurrencyModel, CurrencyDto>().ReverseMap();
             CreateMap<CurrencyEntity, CurrencyDto>().ReverseMap();
         }
     }

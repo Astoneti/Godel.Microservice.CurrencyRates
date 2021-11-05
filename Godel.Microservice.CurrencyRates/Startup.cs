@@ -1,6 +1,6 @@
 using AutoMapper;
+using Godel.Microservice.CurrencyRates.Business;
 using Godel.Microservice.CurrencyRates.Business.Contracts;
-using Godel.Microservice.CurrencyRates.Business.Services;
 using Godel.Microservice.CurrencyRates.Data;
 using Godel.Microservice.CurrencyRates.Data.Contracts;
 using Godel.Microservice.CurrencyRates.Data.Repositories;
@@ -28,7 +28,7 @@ namespace Godel.Microservice.CurrencyRates
         {
             var mapperConfig = new MapperConfiguration(mc =>
             {
-                mc.AddProfile(new MappingProfile());
+                mc.AddProfile(new CurrencyProfile());
             });
 
             IMapper mapper = mapperConfig.CreateMapper();

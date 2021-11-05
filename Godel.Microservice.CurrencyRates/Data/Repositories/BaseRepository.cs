@@ -8,12 +8,12 @@ namespace Godel.Microservice.CurrencyRates.Data.Repositories
     public class BaseRepository<T> : IRepository<T>
         where T : class
     {
+        protected DbContext DbContext { get; }
+
         public BaseRepository(DbContext dbContext)
         {
             DbContext = dbContext;
         }
-
-        protected DbContext DbContext { get; }
 
         public List<T> GetList()
         {
