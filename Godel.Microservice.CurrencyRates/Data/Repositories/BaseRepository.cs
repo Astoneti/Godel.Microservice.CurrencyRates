@@ -1,4 +1,5 @@
 ﻿using Godel.Microservice.CurrencyRates.Data.Contracts;
+using Godel.Microservice.CurrencyRates.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,12 @@ namespace Godel.Microservice.CurrencyRates.Data.Repositories
         public List<T> GetList()
         {
             return DbContext.Set<T>().ToList();
+        }
+
+        public void Create(CurrencyEntity currency) 
+        {
+            DbContext.Add(currency);
+            DbContext.SaveChanges();
         }
     }
 }

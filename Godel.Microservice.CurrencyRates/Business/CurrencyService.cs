@@ -23,5 +23,10 @@ namespace Godel.Microservice.CurrencyRates.Business
             var newList = _currencyRepository.GetList();
             return _mapper.Map<List<CurrencyEntity>, List<CurrencyDto>>(newList);
         }
+
+        public void Create(CurrencyEntity currency)
+        {
+            _currencyRepository.Create(currency);
+        }
     }
 }
