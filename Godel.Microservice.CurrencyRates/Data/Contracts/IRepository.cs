@@ -13,6 +13,6 @@ namespace Godel.Microservice.CurrencyRates.Data.Contracts
 
         public void Update(CurrencyEntity currency);
 
-        public void Delete(CurrencyEntity currency);
+        public void Delete(int id);
     }
 }

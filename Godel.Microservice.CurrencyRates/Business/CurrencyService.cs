@@ -45,7 +45,7 @@ namespace Godel.Microservice.CurrencyRates.Business
         public void Delete(CurrencyDto currencyDto)
         {
             var currency = _mapper.Map<CurrencyDto, CurrencyEntity>(currencyDto);
-            _currencyRepository.Delete(currency);
+            _currencyRepository.Delete(currency.Id);
         }
     }
 }
