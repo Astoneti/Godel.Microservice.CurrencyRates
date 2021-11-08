@@ -5,11 +5,11 @@ namespace Godel.Microservice.CurrencyRates.Data
 {
     public class CurrencyDbContext : DbContext
     {
-        public DbSet<CurrencyEntity> Currencies { get; set; }
-
         public CurrencyDbContext(DbContextOptions<CurrencyDbContext> options)
          : base(options)
         {
         }
+
+        public DbSet<CurrencyEntity> Currencies { get; set; }
     }
 }

@@ -21,9 +21,26 @@ namespace Godel.Microservice.CurrencyRates.Data.Repositories
             return DbContext.Set<T>().ToList();
         }
 
-        public void Create(CurrencyEntity currency) 
+        public CurrencyEntity Get(int id)
+        {
+            return DbContext.Set<CurrencyEntity>().FirstOrDefault(_ => _.Id == id);
+        }
+
+        public void Create(CurrencyEntity currency)         
         {
             DbContext.Add(currency);
+            DbContext.SaveChanges();
+        }
+
+        public void Update(CurrencyEntity currency)
+        {
+            DbContext.Update(currency);
+            DbContext.SaveChanges();
+        }
+
+        public void Delete(CurrencyEntity currency)
+        {
+            DbContext.Remove(currency);
             DbContext.SaveChanges();
         }
     }
