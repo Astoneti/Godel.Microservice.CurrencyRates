@@ -21,7 +21,7 @@ namespace Godel.Microservice.CurrencyRates.Controllers
         }
 
         [HttpGet]
-        [Route("getlist")]
+        [Route("list")]
         public IEnumerable<CurrencyModel> Get()
         {
             var modelList = _currencyService.GetList();
@@ -29,7 +29,7 @@ namespace Godel.Microservice.CurrencyRates.Controllers
         }
 
         [HttpGet]
-        [Route("getbyid")]
+        [Route("{id}")]
         public CurrencyModel Get(int id)
         {
             var currencyId = _currencyService.Get(id);
@@ -37,23 +37,23 @@ namespace Godel.Microservice.CurrencyRates.Controllers
         }
 
         [HttpPost]
-        [Route("createcurrency")]
+        [Route("create")]
         public void Create(CurrencyModel currency)
         {
-            var currencyDto = _mapper.Map<CurrencyModel, CurrencyDto> (currency);
+            var currencyDto = _mapper.Map<CurrencyModel, CurrencyDto>(currency);
             _currencyService.Create(currencyDto);
         }
 
         [HttpPut]
-        [Route("editcurrency")]
+        [Route("edit")]
         public void Edit(CurrencyModel currency)
         {
             var currencyDto = _mapper.Map<CurrencyModel, CurrencyDto>(currency);
-           _currencyService.Update(currencyDto);
+            _currencyService.Update(currencyDto);
         }
 
         [HttpDelete]
-        [Route("currencydelete")]
+        [Route("delete")]
         public void Delete(int id)
         {
             var currencyDto = _currencyService.Get(id);
