@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godel.Microservice.CurrencyRates", "Godel.Microservice.CurrencyRates\Godel.Microservice.CurrencyRates.csproj", "{07E3070D-74A0-44D1-B97B-96B32EEFCD8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07E3070D-74A0-44D1-B97B-96B32EEFCD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E3070D-74A0-44D1-B97B-96B32EEFCD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E3070D-74A0-44D1-B97B-96B32EEFCD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E3070D-74A0-44D1-B97B-96B32EEFCD8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3B8CE34-A02D-4EDD-8AA3-A12C1A4DC4E0}
+	EndGlobalSection
+EndGlobal
